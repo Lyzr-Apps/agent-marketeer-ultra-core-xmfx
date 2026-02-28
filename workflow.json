@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    {"id": "input_node", "type": "Input", "label": "Campaign Brief Input", "nodeCategory": "input"},
+    {"id": "manager_agent", "type": "Agent", "label": "Marketing Campaign Coordinator", "nodeCategory": "agent"},
+    {"id": "seo_agent", "type": "Agent", "label": "SEO Research Agent", "nodeCategory": "agent"},
+    {"id": "content_agent", "type": "Agent", "label": "Content Writer Agent", "nodeCategory": "agent"},
+    {"id": "competitor_agent", "type": "Agent", "label": "Competitor Analysis Agent", "nodeCategory": "agent"},
+    {"id": "graphic_agent", "type": "Agent", "label": "Graphic Design Agent", "nodeCategory": "agent"},
+    {"id": "output_node", "type": "Output", "label": "Campaign Output", "nodeCategory": "end"}
+  ],
+  "edges": [
+    {"source": "input_node", "target": "manager_agent"},
+    {"source": "manager_agent", "target": "seo_agent"},
+    {"source": "manager_agent", "target": "content_agent"},
+    {"source": "manager_agent", "target": "competitor_agent"},
+    {"source": "manager_agent", "target": "graphic_agent"},
+    {"source": "graphic_agent", "target": "output_node"}
+  ]
+}

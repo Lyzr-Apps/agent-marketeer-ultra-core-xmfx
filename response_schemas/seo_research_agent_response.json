@@ -1,0 +1,36 @@
+{
+  "agent_name": "SEO Research Agent",
+  "agent_id": "69a27b878e6d0e51fd5cd397",
+  "description": "Performs keyword research, analyzes search intent, identifies ranking opportunities, and provides SEO performance metrics and optimization recommendations for target topics",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "keywords": [
+      {
+        "keyword": "string",
+        "searchVolume": "string",
+        "difficulty": "number",
+        "intent": "string"
+      }
+    ],
+    "optimizationScore": "number",
+    "recommendations": ["string"],
+    "contentGaps": ["string"],
+    "longTailKeywords": ["string"]
+  },
+  "example_response": {
+    "keywords": [
+      {
+        "keyword": "sample string",
+        "searchVolume": "sample string",
+        "difficulty": 0,
+        "intent": "sample string"
+      }
+    ],
+    "optimizationScore": 0,
+    "recommendations": ["sample string"],
+    "contentGaps": ["sample string"],
+    "longTailKeywords": ["sample string"]
+  }
+}

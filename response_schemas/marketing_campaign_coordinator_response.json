@@ -1,0 +1,158 @@
+{
+  "agent_name": "Marketing Campaign Coordinator",
+  "agent_id": "69a27ba3f18a4f26754c8ada",
+  "description": "Coordinates sub-agents for parallel content production; routes campaign brief to SEO, content, and competitor agents; aggregates all outputs into a unified campaign preview with quality scores",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "campaignOverview": {
+      "topic": "string",
+      "channels": [
+        "string"
+      ],
+      "overallQualityScore": "number"
+    },
+    "seoResults": {
+      "keywords": [
+        {
+          "keyword": "string",
+          "searchVolume": "string",
+          "difficulty": "number",
+          "intent": "string"
+        }
+      ],
+      "optimizationScore": "number",
+      "recommendations": [
+        "string"
+      ],
+      "contentGaps": [
+        "string"
+      ],
+      "longTailKeywords": [
+        "string"
+      ]
+    },
+    "contentResults": {
+      "blog": {
+        "headline": "string",
+        "metaDescription": "string",
+        "content": "string",
+        "cta": "string"
+      },
+      "social": {
+        "twitter": "string",
+        "linkedin": "string",
+        "instagram": "string",
+        "facebook": "string",
+        "hashtags": [
+          "string"
+        ]
+      },
+      "email": {
+        "subjectLine": "string",
+        "previewText": "string",
+        "body": "string",
+        "ctaText": "string"
+      },
+      "brandVoiceScore": "number",
+      "brandVoiceNotes": "string"
+    },
+    "competitorResults": {
+      "competitors": [
+        {
+          "name": "string",
+          "url": "string",
+          "strengths": "string",
+          "weaknesses": "string",
+          "contentApproach": "string"
+        }
+      ],
+      "competitiveDifficulty": "number",
+      "contentGaps": [
+        "string"
+      ],
+      "differentiationRecommendations": [
+        "string"
+      ],
+      "uniqueAngles": [
+        "string"
+      ]
+    }
+  },
+  "example_response": {
+    "campaignOverview": {
+      "topic": "sample string",
+      "channels": [
+        "sample string"
+      ],
+      "overallQualityScore": 0
+    },
+    "seoResults": {
+      "keywords": [
+        {
+          "keyword": "sample string",
+          "searchVolume": "sample string",
+          "difficulty": 0,
+          "intent": "sample string"
+        }
+      ],
+      "optimizationScore": 0,
+      "recommendations": [
+        "sample string"
+      ],
+      "contentGaps": [
+        "sample string"
+      ],
+      "longTailKeywords": [
+        "sample string"
+      ]
+    },
+    "contentResults": {
+      "blog": {
+        "headline": "sample string",
+        "metaDescription": "sample string",
+        "content": "sample string",
+        "cta": "sample string"
+      },
+      "social": {
+        "twitter": "sample string",
+        "linkedin": "sample string",
+        "instagram": "sample string",
+        "facebook": "sample string",
+        "hashtags": [
+          "sample string"
+        ]
+      },
+      "email": {
+        "subjectLine": "sample string",
+        "previewText": "sample string",
+        "body": "sample string",
+        "ctaText": "sample string"
+      },
+      "brandVoiceScore": 0,
+      "brandVoiceNotes": "sample string"
+    },
+    "competitorResults": {
+      "competitors": [
+        {
+          "name": "sample string",
+          "url": "sample string",
+          "strengths": "sample string",
+          "weaknesses": "sample string",
+          "contentApproach": "sample string"
+        }
+      ],
+      "competitiveDifficulty": 0,
+      "contentGaps": [
+        "sample string"
+      ],
+      "differentiationRecommendations": [
+        "sample string"
+      ],
+      "uniqueAngles": [
+        "sample string"
+      ]
+    }
+  }
+}

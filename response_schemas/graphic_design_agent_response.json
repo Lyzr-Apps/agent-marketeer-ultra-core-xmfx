@@ -1,0 +1,28 @@
+{
+  "agent_name": "Graphic Design Agent",
+  "agent_id": "69a27bb2d6fa89687c20af7b",
+  "description": "Generates marketing graphics (social media banners, blog hero images, email headers) based on finalized content and channel specifications",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "graphicDescription": "string",
+    "channel": "string",
+    "dimensions": "string",
+    "designNotes": "string"
+  },
+  "example_response": {
+    "graphicDescription": "sample string",
+    "channel": "sample string",
+    "dimensions": "sample string",
+    "designNotes": "sample string"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

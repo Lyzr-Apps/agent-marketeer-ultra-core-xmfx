@@ -1,0 +1,38 @@
+{
+  "agent_name": "Competitor Analysis Agent",
+  "agent_id": "69a27b88e558069e826f040f",
+  "description": "Benchmarks top-ranking competitor content for the target topic, identifies content gaps, and provides differentiation recommendations",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "competitors": [
+      {
+        "name": "string",
+        "url": "string",
+        "strengths": "string",
+        "weaknesses": "string",
+        "contentApproach": "string"
+      }
+    ],
+    "competitiveDifficulty": "number",
+    "contentGaps": ["string"],
+    "differentiationRecommendations": ["string"],
+    "uniqueAngles": ["string"]
+  },
+  "example_response": {
+    "competitors": [
+      {
+        "name": "sample string",
+        "url": "sample string",
+        "strengths": "sample string",
+        "weaknesses": "sample string",
+        "contentApproach": "sample string"
+      }
+    ],
+    "competitiveDifficulty": 0,
+    "contentGaps": ["sample string"],
+    "differentiationRecommendations": ["sample string"],
+    "uniqueAngles": ["sample string"]
+  }
+}

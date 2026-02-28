@@ -1,0 +1,48 @@
+{
+  "agents": {
+    "seo_research_agent": {
+      "agent_id": "69a27b878e6d0e51fd5cd397",
+      "type": "sub-agent",
+      "name": "SEO Research Agent",
+      "provider": "Perplexity",
+      "model": "sonar-pro"
+    },
+    "content_writer_agent": {
+      "agent_id": "69a27b88fc94455e7546bde6",
+      "type": "sub-agent",
+      "name": "Content Writer Agent",
+      "provider": "OpenAI",
+      "model": "gpt-4o"
+    },
+    "competitor_analysis_agent": {
+      "agent_id": "69a27b88e558069e826f040f",
+      "type": "sub-agent",
+      "name": "Competitor Analysis Agent",
+      "provider": "Perplexity",
+      "model": "sonar-pro"
+    },
+    "marketing_campaign_coordinator": {
+      "agent_id": "69a27ba3f18a4f26754c8ada",
+      "type": "manager",
+      "name": "Marketing Campaign Coordinator",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "managed_agents": [
+        "69a27b878e6d0e51fd5cd397",
+        "69a27b88fc94455e7546bde6",
+        "69a27b88e558069e826f040f"
+      ]
+    },
+    "graphic_design_agent": {
+      "agent_id": "69a27bb2d6fa89687c20af7b",
+      "type": "independent",
+      "name": "Graphic Design Agent",
+      "provider": "Google",
+      "model": "gemini-2.5-pro",
+      "has_image_output": true,
+      "image_output_config": {
+        "model": "dall-e-3"
+      }
+    }
+  }
+}
