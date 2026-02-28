@@ -11,25 +11,7 @@ import BrandSettings, { BrandSettingsData } from './sections/BrandSettings'
 const MANAGER_AGENT_ID = '69a27ba3f18a4f26754c8ada'
 const GRAPHIC_AGENT_ID = '69a27bb2d6fa89687c20af7b'
 
-const THEME_VARS: React.CSSProperties & Record<string, string> = {
-  '--background': '30 40% 98%',
-  '--foreground': '20 40% 10%',
-  '--card': '30 40% 96%',
-  '--card-foreground': '20 40% 10%',
-  '--primary': '24 95% 53%',
-  '--primary-foreground': '30 40% 98%',
-  '--secondary': '30 35% 92%',
-  '--secondary-foreground': '20 40% 15%',
-  '--accent': '12 80% 50%',
-  '--accent-foreground': '30 40% 98%',
-  '--muted': '30 30% 90%',
-  '--muted-foreground': '20 25% 45%',
-  '--border': '30 35% 88%',
-  '--input': '30 30% 80%',
-  '--ring': '24 95% 53%',
-  '--destructive': '0 84% 60%',
-  '--radius': '0.875rem',
-}
+const THEME_CSS = `:root{--background:30 40% 98%;--foreground:20 40% 10%;--card:30 40% 96%;--card-foreground:20 40% 10%;--primary:24 95% 53%;--primary-foreground:30 40% 98%;--secondary:30 35% 92%;--secondary-foreground:20 40% 15%;--accent:12 80% 50%;--accent-foreground:30 40% 98%;--muted:30 30% 90%;--muted-foreground:20 25% 45%;--border:30 35% 88%;--input:30 30% 80%;--ring:24 95% 53%;--destructive:0 84% 60%;--radius:0.875rem;}`
 
 const SAMPLE_CAMPAIGNS: CampaignData[] = [
   {
@@ -280,7 +262,8 @@ export default function Page() {
 
   return (
     <ErrorBoundary>
-      <div style={THEME_VARS} className="min-h-screen bg-background text-foreground flex font-sans">
+      <style dangerouslySetInnerHTML={{ __html: THEME_CSS }} />
+      <div className="min-h-screen bg-background text-foreground flex font-sans">
         <Sidebar
           currentView={currentView}
           onNavigate={handleNavigate}
@@ -289,7 +272,7 @@ export default function Page() {
           recentCampaigns={recentCampaigns}
         />
 
-        <main className="flex-1 flex flex-col overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(30 50% 97%) 0%, hsl(20 45% 95%) 35%, hsl(40 40% 96%) 70%, hsl(15 35% 97%) 100%)' }}>
+        <main className="flex-1 flex flex-col overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(30, 50%, 97%) 0%, hsl(20, 45%, 95%) 35%, hsl(40, 40%, 96%) 70%, hsl(15, 35%, 97%) 100%)' }}>
           {error && (
             <div className="mx-6 mt-4 p-3 rounded-xl bg-red-50 border border-red-200 flex items-center justify-between">
               <p className="text-sm text-red-700">{error}</p>

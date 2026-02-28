@@ -93,14 +93,14 @@ export default function CampaignBrief({ isOpen, onClose, onSubmit, isGenerating,
           <div className="p-6 flex flex-col items-center justify-center min-h-[400px]">
             <div className="w-full max-w-sm">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center animate-pulse" style={{ background: 'linear-gradient(135deg, hsl(24 95% 53%), hsl(12 80% 50%))' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center animate-pulse" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
                   <FiSend className="w-7 h-7 text-white" />
                 </div>
               </div>
               <h3 className="text-center text-lg font-semibold text-foreground mb-2">Generating Campaign</h3>
               <p className="text-center text-sm text-muted-foreground mb-6">{generationStage || 'Initializing...'}</p>
               <div className="w-full bg-muted rounded-full h-2 mb-4 overflow-hidden">
-                <div className="h-full rounded-full transition-all duration-700 ease-out" style={{ width: `${progressPercent}%`, background: 'linear-gradient(90deg, hsl(24 95% 53%), hsl(12 80% 50%))' }} />
+                <div className="h-full rounded-full transition-all duration-700 ease-out" style={{ width: `${progressPercent}%`, background: 'linear-gradient(90deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }} />
               </div>
               <div className="space-y-2">
                 {PROGRESS_STAGES.map((stage, i) => {
@@ -168,7 +168,7 @@ export default function CampaignBrief({ isOpen, onClose, onSubmit, isGenerating,
               </div>
             </div>
 
-            <Button onClick={handleSubmit} disabled={!topic.trim() || channels.length === 0} className="w-full text-primary-foreground font-medium py-5 shadow-lg hover:shadow-xl transition-all duration-300" style={{ background: 'linear-gradient(135deg, hsl(24 95% 53%), hsl(12 80% 50%))' }}>
+            <Button onClick={handleSubmit} disabled={!topic.trim() || channels.length === 0} className="w-full text-primary-foreground font-medium py-5 shadow-lg hover:shadow-xl transition-all duration-300" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
               <FiSend className="w-4 h-4 mr-2" />
               Generate Campaign
             </Button>

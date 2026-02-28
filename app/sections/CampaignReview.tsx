@@ -53,12 +53,14 @@ function ScoreGauge({ score, label, size = 'md' }: { score: number; label: strin
 
   return (
     <div className="flex flex-col items-center">
-      <svg width={dim} height={dim} className="-rotate-90">
-        <circle cx={dim / 2} cy={dim / 2} r={r} fill="none" stroke="hsl(30 30% 90%)" strokeWidth={strokeW} />
-        <circle cx={dim / 2} cy={dim / 2} r={r} fill="none" stroke={color} strokeWidth={strokeW} strokeDasharray={circ} strokeDashoffset={offset} strokeLinecap="round" className="transition-all duration-700" />
-      </svg>
-      <span className="text-lg font-bold text-foreground -mt-[calc(50%+0.5rem)] mb-4">{score}</span>
-      <span className="text-xs text-muted-foreground">{label}</span>
+      <div className="relative" style={{ width: dim, height: dim }}>
+        <svg width={dim} height={dim} className="-rotate-90">
+          <circle cx={dim / 2} cy={dim / 2} r={r} fill="none" stroke="hsl(30, 30%, 90%)" strokeWidth={strokeW} />
+          <circle cx={dim / 2} cy={dim / 2} r={r} fill="none" stroke={color} strokeWidth={strokeW} strokeDasharray={circ} strokeDashoffset={offset} strokeLinecap="round" className="transition-all duration-700" />
+        </svg>
+        <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-foreground">{score}</span>
+      </div>
+      <span className="text-xs text-muted-foreground mt-1">{label}</span>
     </div>
   )
 }
@@ -344,7 +346,7 @@ export default function CampaignReview({ campaignData, images, onGenerateGraphic
               <FiImage className="w-5 h-5 text-primary" />
               <h3 className="text-base font-semibold text-foreground">Campaign Graphics</h3>
             </div>
-            <Button onClick={onGenerateGraphics} disabled={graphicsLoading} className="text-primary-foreground" style={{ background: 'linear-gradient(135deg, hsl(24 95% 53%), hsl(12 80% 50%))' }}>
+            <Button onClick={onGenerateGraphics} disabled={graphicsLoading} className="text-primary-foreground" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
               {graphicsLoading ? <><FiRefreshCw className="w-4 h-4 mr-2 animate-spin" /> Generating...</> : <><FiImage className="w-4 h-4 mr-2" /> Generate Graphics</>}
             </Button>
           </div>
