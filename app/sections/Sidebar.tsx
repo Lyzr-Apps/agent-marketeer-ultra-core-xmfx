@@ -30,10 +30,10 @@ export default function Sidebar({ currentView, onNavigate, agents, activeCampaig
   ]
 
   return (
-    <div className="w-64 h-screen flex-shrink-0 border-r border-border flex flex-col" style={{ background: 'hsl(30, 38%, 95%)' }}>
+    <div className="w-64 h-screen flex-shrink-0 border-r border-border flex flex-col bg-sidebar">
       <div className="p-5">
         <div className="flex items-center gap-2 mb-1">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-gradient-sunset">
             <FiTarget className="w-4 h-4 text-white" />
           </div>
           <div>
@@ -50,8 +50,7 @@ export default function Sidebar({ currentView, onNavigate, agents, activeCampaig
           <button
             key={item.view}
             onClick={() => onNavigate(item.view)}
-            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${currentView === item.view ? 'text-primary-foreground shadow-md' : 'text-foreground/70 hover:bg-secondary hover:text-foreground'}`}
-            style={currentView === item.view ? { background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' } : undefined}
+            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${currentView === item.view ? 'bg-gradient-sunset text-primary-foreground shadow-md' : 'text-foreground/70 hover:bg-secondary hover:text-foreground'}`}
           >
             {item.icon}
             {item.label}

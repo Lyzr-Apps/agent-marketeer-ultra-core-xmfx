@@ -346,7 +346,7 @@ export default function CampaignReview({ campaignData, images, onGenerateGraphic
               <FiImage className="w-5 h-5 text-primary" />
               <h3 className="text-base font-semibold text-foreground">Campaign Graphics</h3>
             </div>
-            <Button onClick={onGenerateGraphics} disabled={graphicsLoading} className="text-primary-foreground" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
+            <Button onClick={onGenerateGraphics} disabled={graphicsLoading} className="bg-gradient-sunset text-primary-foreground">
               {graphicsLoading ? <><FiRefreshCw className="w-4 h-4 mr-2 animate-spin" /> Generating...</> : <><FiImage className="w-4 h-4 mr-2" /> Generate Graphics</>}
             </Button>
           </div>

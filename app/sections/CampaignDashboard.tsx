@@ -73,7 +73,7 @@ export default function CampaignDashboard({ campaigns, onNewCampaign, onSelectCa
               <Switch id="sample-toggle" checked={showSample} onCheckedChange={onToggleSample} />
               <Label htmlFor="sample-toggle" className="text-sm text-muted-foreground">Sample Data</Label>
             </div>
-            <Button onClick={onNewCampaign} className="text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
+            <Button onClick={onNewCampaign} className="bg-gradient-sunset text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300">
               <FiPlus className="w-4 h-4 mr-2" />
               New Campaign
             </Button>
@@ -123,7 +123,7 @@ export default function CampaignDashboard({ campaigns, onNewCampaign, onSelectCa
               <p className="text-sm text-muted-foreground mb-4 text-center max-w-sm">
                 Create your first marketing campaign to generate SEO-optimized content, social posts, and competitor analysis.
               </p>
-              <Button onClick={onNewCampaign} className="text-primary-foreground" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
+              <Button onClick={onNewCampaign} className="bg-gradient-sunset text-primary-foreground">
                 <FiPlus className="w-4 h-4 mr-2" />
                 Create Campaign
               </Button>

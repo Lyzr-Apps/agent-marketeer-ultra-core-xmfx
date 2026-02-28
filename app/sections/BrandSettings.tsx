@@ -107,7 +107,7 @@ export default function BrandSettings({ settings, onSave }: BrandSettingsProps) 
           <Separator />
 
           <div className="flex items-center gap-3">
-            <Button onClick={handleSave} className="text-primary-foreground font-medium px-8 shadow-lg" style={{ background: 'linear-gradient(135deg, hsl(24, 95%, 53%), hsl(12, 80%, 50%))' }}>
+            <Button onClick={handleSave} className="bg-gradient-sunset text-primary-foreground font-medium px-8 shadow-lg">
               {saved ? <><FiCheck className="w-4 h-4 mr-2" /> Saved</> : 'Save Settings'}
             </Button>
             {saved && <span className="text-sm text-green-600 font-medium">Settings saved successfully</span>}
